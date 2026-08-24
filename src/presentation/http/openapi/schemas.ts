@@ -611,3 +611,119 @@ export const operatorCardPageSchema: SchemaObject = {
     nextCursor: { type: 'string', nullable: true },
   },
 };
+
+const metricDistributionSchema = (keys: readonly string[]): SchemaObject => ({
+  type: 'object',
+  required: [...keys],
+  properties: Object.fromEntries(keys.map((key) => [key, { type: 'integer', minimum: 0 }])),
+});
+
+const percentileSchema: SchemaObject = {
+  type: 'object',
+  required: ['average', 'p50', 'p95', 'p99'],
+  properties: {
+    average: { type: 'number', minimum: 0 },
+    p50: { type: 'number', minimum: 0 },
+    p95: { type: 'number', minimum: 0 },
+    p99: { type: 'number', minimum: 0 },
+  },
+};
+
+export const dashboardMetricsSchema: SchemaObject = {
+  type: 'object',
+  required: [
+    'generatedAt',
+    'ruleVersion',
+    'transactions',
+    'actions',
+    'riskScore',
+    'processingTimeMs',
+    'alerts',
+    'cases',
+    'challenges',
+  ],
+  properties: {
+    generatedAt: dateTime,
+    ruleVersion: { type: 'string' },
+    transactions: metricDistributionSchema(['total', 'scored', 'unscored']),
+    actions: metricDistributionSchema(['approve', 'stepUp', 'block']),
+    riskScore: percentileSchema,
+    processingTimeMs: percentileSchema,
+    alerts: metricDistributionSchema(['total', 'open', 'confirmed', 'falsePositive', 'closed']),
+    cases: metricDistributionSchema([
+      'total',
+      'open',
+      'investigating',
+      'confirmed',
+      'falsePositive',
+      'closed',
+    ]),
+    challenges: metricDistributionSchema([
+      'total',
+      'pending',
+      'verified',
+      'denied',
+      'reviewRequired',
+      'expired',
+    ]),
+  },
+};
+
+export const fraudSignalsExportResponseSchema: SchemaObject = {
+  type: 'object',
+  required: ['file', 'predictionCount', 'ruleVersion'],
+  properties: {
+    file: { type: 'string', example: 'natija/fraud_signallari.csv' },
+    predictionCount: { type: 'integer', minimum: 0 },
+    ruleVersion: { type: 'string' },
+  },
+};
+
+export const evaluationResponseSchema: SchemaObject = {
+  type: 'object',
+  required: [
+    'ruleVersion',
+    'evaluatedAt',
+    'totalTransactions',
+    'predictedFraud',
+    'actualFraud',
+    'truePositive',
+    'falsePositive',
+    'falseNegative',
+    'trueNegative',
+    'precision',
+    'recall',
+    'f1',
+    'patternRecall',
+    'falsePositiveSample',
+    'falseNegativeSample',
+  ],
+  properties: {
+    ruleVersion: { type: 'string' },
+    evaluatedAt: dateTime,
+    totalTransactions: { type: 'integer', minimum: 0 },
+    predictedFraud: { type: 'integer', minimum: 0 },
+    actualFraud: { type: 'integer', minimum: 0 },
+    truePositive: { type: 'integer', minimum: 0 },
+    falsePositive: { type: 'integer', minimum: 0 },
+    falseNegative: { type: 'integer', minimum: 0 },
+    trueNegative: { type: 'integer', minimum: 0 },
+    precision: { type: 'number', minimum: 0, maximum: 1 },
+    recall: { type: 'number', minimum: 0, maximum: 1 },
+    f1: { type: 'number', minimum: 0, maximum: 1 },
+    patternRecall: {
+      type: 'object',
+      additionalProperties: {
+        type: 'object',
+        required: ['actual', 'detected', 'recall'],
+        properties: {
+          actual: { type: 'integer', minimum: 0 },
+          detected: { type: 'integer', minimum: 0 },
+          recall: { type: 'number', minimum: 0, maximum: 1 },
+        },
+      },
+    },
+    falsePositiveSample: { type: 'array', items: { type: 'string' }, maxItems: 50 },
+    falseNegativeSample: { type: 'array', items: { type: 'string' }, maxItems: 50 },
+  },
+};
