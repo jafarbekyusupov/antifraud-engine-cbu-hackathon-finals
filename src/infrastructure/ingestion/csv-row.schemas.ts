@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { sourceIdSchema } from '../../common/source-id.schema';
 import {
   CardImportRecord,
   ClientImportRecord,
@@ -6,9 +7,6 @@ import {
 } from '../../application/ports/dataset-reader.port';
 import { Transaction } from '../../domain/entities';
 import { GeoPoint } from '../../domain/value-objects';
-
-const identifier = (prefix: string, digits: number): z.ZodString =>
-  z.string().regex(new RegExp(`^${prefix}\\d{${digits}}$`));
 
 const positiveIntegerString = z
   .string()
@@ -36,7 +34,7 @@ const merchantRiskMapping = {
 
 export const clientCsvRowSchema: z.ZodType<ClientImportRecord> = z
   .strictObject({
-    client_id: identifier('C', 5),
+    client_id: sourceIdSchema,
     ism: z.string().trim().min(1).max(100),
     jins: z.enum(['M', 'F']),
     tugilgan_yil: z
@@ -63,8 +61,8 @@ export const clientCsvRowSchema: z.ZodType<ClientImportRecord> = z
 
 export const cardCsvRowSchema: z.ZodType<CardImportRecord> = z
   .strictObject({
-    card_id: identifier('K', 6),
-    client_id: identifier('C', 5),
+    card_id: sourceIdSchema,
+    client_id: sourceIdSchema,
     turi: z.enum(['UZCARD', 'HUMO', 'VISA', 'MASTERCARD']),
     valyuta: z.string().length(3).toUpperCase(),
     ochilgan_sana: dateString,
@@ -81,7 +79,7 @@ export const cardCsvRowSchema: z.ZodType<CardImportRecord> = z
 
 export const merchantCsvRowSchema: z.ZodType<MerchantImportRecord> = z
   .strictObject({
-    merchant_id: identifier('M', 5),
+    merchant_id: sourceIdSchema,
     nomi: z.string().trim().min(1).max(100),
     mcc: z.string().regex(/^\d{4}$/),
     kategoriya: z.string().trim().min(1).max(50),
@@ -99,13 +97,13 @@ export const merchantCsvRowSchema: z.ZodType<MerchantImportRecord> = z
 
 export const transactionCsvRowSchema: z.ZodType<Transaction> = z
   .strictObject({
-    tx_id: identifier('T', 8),
-    card_id: identifier('K', 6),
-    client_id: identifier('C', 5),
+    tx_id: sourceIdSchema,
+    card_id: sourceIdSchema,
+    client_id: sourceIdSchema,
     vaqt: timestampString,
     summa: positiveIntegerString,
     valyuta: z.string().length(3).toUpperCase(),
-    merchant_id: identifier('M', 5),
+    merchant_id: sourceIdSchema,
     mcc: z.string().regex(/^\d{4}$/),
     shahar: z.string().trim().min(1).max(50),
     lat: finiteNumberString.pipe(z.number().min(-90).max(90)),

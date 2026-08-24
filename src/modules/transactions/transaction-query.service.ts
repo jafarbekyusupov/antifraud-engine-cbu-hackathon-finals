@@ -1,5 +1,6 @@
 import { BadRequestException, Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { z } from 'zod';
+import { sourceIdSchema } from '../../common/source-id.schema';
 import {
   CustomerTransactionDetail,
   CustomerTransactionListItem,
@@ -16,7 +17,7 @@ import {
 
 const operatorCursorSchema = z.strictObject({
   occurredAt: z.iso.datetime(),
-  id: z.string().regex(/^T\d{8}$/),
+  id: sourceIdSchema,
 });
 
 export interface TransactionPage {

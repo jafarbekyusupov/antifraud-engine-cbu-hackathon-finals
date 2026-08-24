@@ -1,12 +1,10 @@
 import { z } from 'zod';
-
-const sourceId = (prefix: string, digits: number) =>
-  z.string().regex(new RegExp(`^${prefix}\\d{${digits}}$`));
+import { sourceIdSchema } from '../../../common/source-id.schema';
 
 export const operatorTransactionQuerySchema = z.strictObject({
-  clientId: sourceId('C', 5).optional(),
-  cardId: sourceId('K', 6).optional(),
-  merchantId: sourceId('M', 5).optional(),
+  clientId: sourceIdSchema.optional(),
+  cardId: sourceIdSchema.optional(),
+  merchantId: sourceIdSchema.optional(),
   channel: z.enum(['ATM', 'ECOM', 'P2P', 'POS']).optional(),
   response: z.enum(['OK', 'DECLINED']).optional(),
   action: z.enum(['APPROVE', 'STEP_UP', 'BLOCK']).optional(),
@@ -27,7 +25,7 @@ export const customerTransactionQuerySchema = z.strictObject({
 });
 
 export const transactionParamsSchema = z.strictObject({
-  id: sourceId('T', 8),
+  id: sourceIdSchema,
 });
 
 export type OperatorTransactionQueryDto = z.infer<typeof operatorTransactionQuerySchema>;
