@@ -11,8 +11,8 @@
   "scripts": {
     "build": "nest build",
     "dev": "nest start --watch",
-    "start": "node dist/src/main.js",
-    "start:prod": "node dist/src/main.js",
+    "start": "node dist/main.js",
+    "start:prod": "node dist/main.js",
     "lint": "eslint \"{src,test}/**/*.ts\"",
     "lint:fix": "pnpm run lint -- --fix",
     "format": "prettier --write \"{src,test}/**/*.ts\" \"*.{json,yml,yaml,md}\"",
