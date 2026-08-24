@@ -1,6 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import type { OpenAPIObject } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import { AppConfig } from './config/app.config';
 import { HttpProblemDetailsFilter } from './presentation/http/common/http-problem-details.filter';
@@ -39,9 +40,13 @@ async function bootstrap(): Promise<void> {
     .addTag('Dataset replay', 'Administrative dataset import and chronological replay')
     .addTag('Alerts', 'Fraud analyst alert queue and detail')
     .addTag('Cases', 'Fraud investigation lifecycle and timeline')
+    .addTag('Cards', 'Operator card list and filtering')
+    .addTag('Customer cards', 'Authenticated customer card list')
+    .addTag('Transactions', 'Operator transaction list and detail')
+    .addTag('Customer transactions', 'Authenticated customer transaction list and detail')
     .addTag('Customer security', 'Mobile suspicious-transaction verification')
     .build();
-  const openApiDocument = () =>
+  const openApiDocument = (): OpenAPIObject =>
     SwaggerModule.createDocument(app, openApiConfig, {
       operationIdFactory: (controllerKey, methodKey) => `${controllerKey}_${methodKey}`,
     });

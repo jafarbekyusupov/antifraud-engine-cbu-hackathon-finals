@@ -1,24 +1,20 @@
 import { Controller, Get, Headers, Param, Query } from '@nestjs/common';
-import { ApiHeader, ApiOperation, ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { ApiHeader, ApiOperation, ApiParam, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
+import type { CustomerTransactionDetail } from '../../application/ports/transaction-query.repository';
 import { ZodValidationPipe } from '../../presentation/http/common/zod-validation.pipe';
 import {
   customerTransactionDetailSchema,
   customerTransactionPageSchema,
   problemDetailsSchema,
 } from '../../presentation/http/openapi/schemas';
-import {
-  authenticatedClientIdSchema,
-} from '../customer-security/dto/security-challenge.dto';
+import { authenticatedClientIdSchema } from '../customer-security/dto/security-challenge.dto';
 import {
   customerTransactionQuerySchema,
   CustomerTransactionQueryDto,
   transactionParamsSchema,
   TransactionParamsDto,
 } from './dto/transaction-query.dto';
-import {
-  CustomerTransactionPage,
-  TransactionQueryService,
-} from './transaction-query.service';
+import { CustomerTransactionPage, TransactionQueryService } from './transaction-query.service';
 
 @Controller('v1/customer/transactions')
 @ApiTags('Customer transactions')
@@ -33,8 +29,17 @@ export class CustomerTransactionsController {
 
   @Get()
   @ApiOperation({ summary: 'List only the authenticated customer’s transactions' })
-  @ApiResponse({ status: 200, description: 'Customer transaction page', schema: customerTransactionPageSchema })
-  @ApiResponse({ status: 400, description: 'Invalid filters or cursor', schema: problemDetailsSchema })
+  @ApiQuery({ name: 'cardId', required: false, type: String })
+  @ApiResponse({
+    status: 200,
+    description: 'Customer transaction page',
+    schema: customerTransactionPageSchema,
+  })
+  @ApiResponse({
+    status: 400,
+    description: 'Invalid filters or cursor',
+    schema: problemDetailsSchema,
+  })
   list(
     @Headers('x-authenticated-client-id') clientId: string | undefined,
     @Query(new ZodValidationPipe(customerTransactionQuerySchema))
@@ -46,12 +51,20 @@ export class CustomerTransactionsController {
   @Get(':id')
   @ApiOperation({ summary: 'Get one customer-safe transaction detail' })
   @ApiParam({ name: 'id', description: 'Transaction source ID', example: 'T00044999' })
-  @ApiResponse({ status: 200, description: 'Customer transaction detail', schema: customerTransactionDetailSchema })
-  @ApiResponse({ status: 404, description: 'Transaction not found for this customer', schema: problemDetailsSchema })
+  @ApiResponse({
+    status: 200,
+    description: 'Customer transaction detail',
+    schema: customerTransactionDetailSchema,
+  })
+  @ApiResponse({
+    status: 404,
+    description: 'Transaction not found for this customer',
+    schema: problemDetailsSchema,
+  })
   detail(
     @Headers('x-authenticated-client-id') clientId: string | undefined,
     @Param(new ZodValidationPipe(transactionParamsSchema)) params: TransactionParamsDto,
-  ) {
+  ): Promise<CustomerTransactionDetail> {
     return this.transactionQueries.detailCustomer(params.id, this.parseClientId(clientId));
   }
 

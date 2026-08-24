@@ -1,5 +1,6 @@
 export * from './alerts/alerts.module';
 export * from './cases/cases.module';
+export * from './cards/cards.module';
 export * from './customer-security/customer-security.module';
 export * from './health';
 export * from './ingestion/ingestion.module';
