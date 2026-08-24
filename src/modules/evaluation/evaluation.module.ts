@@ -29,5 +29,6 @@ import { FraudSignalsExportService } from './fraud-signals-export.service';
     EvaluationService,
     FraudSignalsExportService,
   ],
+  exports: [FraudSignalsExportService],
 })
 export class EvaluationModule {}

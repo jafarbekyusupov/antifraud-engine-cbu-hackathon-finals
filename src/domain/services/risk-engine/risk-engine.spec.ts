@@ -75,6 +75,48 @@ describe('RiskEngine', () => {
     expect(assessment.signals[0]?.code).toBe('IMPOSSIBLE_TRAVEL');
   });
 
+  it('does not flag travel when the elapsed time makes it plausible', () => {
+    const previous = transaction({ occurredAt: at(0), city: 'Toshkent' });
+    const current = transaction({
+      id: 'T00000002',
+      occurredAt: new Date('2026-03-01T10:00:00+05:00'),
+      city: 'Samarqand',
+      location: GeoPoint.create(39.6542, 66.9597),
+    });
+    const assessment = RiskEngine.createDefault().assess(
+      current,
+      context({ lastPhysicalTransaction: previous }),
+    );
+
+    expect(
+      assessment.signals.find((signal) => signal.code === 'IMPOSSIBLE_TRAVEL'),
+    ).toBeUndefined();
+  });
+
+  it('flags five attempts inside the ten-minute velocity window', () => {
+    const recent = Array.from({ length: 4 }, (_, index) =>
+      transaction({
+        id: `T0000000${index + 1}`,
+        occurredAt: at(index + 1),
+        merchantId: `M0000${index + 1}`,
+        response: 'DECLINED',
+      }),
+    );
+    const assessment = RiskEngine.createDefault().assess(
+      transaction({
+        id: 'T00000005',
+        occurredAt: at(5),
+        merchantId: 'M00005',
+        response: 'DECLINED',
+      }),
+      context({ recentCardTransactions: recent }),
+    );
+    const velocity = assessment.signals.find((signal) => signal.code === 'VELOCITY');
+
+    expect(velocity).toBeDefined();
+    expect(velocity?.evidence).toMatchObject({ transactionCount: 5 });
+  });
+
   it('does not flag a documented split-bill pattern', () => {
     const recent = Array.from({ length: 6 }, (_, index) =>
       transaction({ id: `T0000000${index + 1}`, occurredAt: at(index + 1), amount: 50_000 }),

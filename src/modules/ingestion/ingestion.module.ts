@@ -14,11 +14,12 @@ import { DrizzleDatasetImportRepository } from '../../infrastructure/persistence
 import { DrizzleReplayJobRepository } from '../../infrastructure/persistence/drizzle-replay-job.repository';
 import { DrizzleTransactionReplayRepository } from '../../infrastructure/persistence/drizzle-transaction-replay.repository';
 import { RiskModule } from '../risk/risk.module';
+import { EvaluationModule } from '../evaluation/evaluation.module';
 import { ReplayJobController } from './replay-job.controller';
 import { ReplayJobService } from './replay-job.service';
 
 @Module({
-  imports: [DatabaseModule, RiskModule],
+  imports: [DatabaseModule, RiskModule, EvaluationModule],
   controllers: [ReplayJobController],
   providers: [
     {

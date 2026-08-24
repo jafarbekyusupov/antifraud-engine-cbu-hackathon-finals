@@ -1,9 +1,22 @@
 # CBU Anti-Fraud Engine
 
-NestJS/Fastify and PostgreSQL backend for real-time explainable transaction scoring, analyst alert
-investigation, and customer mobile verification.
+Real-time, explainable card-transaction fraud scoring for the CBU Coding Hackathon 2026. The service accepts live transactions, produces a 0–100 risk score, replays CSV datasets chronologically, exposes analyst/customer APIs, and generates the required submission file.
 
-## Local API
+## Stack
+
+- TypeScript, Node.js 22, NestJS 11, Fastify
+- PostgreSQL 17 and Drizzle ORM
+- Zod validation and Docker Compose
+
+## Run
+
+Place `clients.csv`, `cards.csv`, `merchants.csv`, and `transactions.csv` in `data/`, then run:
+
+```bash
+docker compose up --build
+```
+
+Or locally:
 
 ```bash
 pnpm install --frozen-lockfile
@@ -12,25 +25,46 @@ pnpm build
 pnpm start
 ```
 
-- API: `http://localhost:3000/api`
 - Swagger: `http://localhost:3000/docs`
 - OpenAPI JSON: `http://localhost:3000/docs/openapi.json`
 - Health: `http://localhost:3000/health`
 
-Database migrations run automatically on application startup.
+Migrations run automatically during startup.
 
-## Client integration
+## Replay and required result
 
-- Web fraud-analyst clients use `/api/v1/operator/*`.
-- Mobile customer clients use `/api/v1/customer/security-challenges/*`.
-- Web fraud-analyst transaction history uses `/api/v1/operator/transactions/*`.
-- Mobile customer transaction history uses `/api/v1/customer/transactions/*`.
-- Payment infrastructure uses `/api/v1/internal/transactions`.
-- Demo/judge controls use `/api/v1/admin/replay-jobs`.
+```bash
+curl -X POST http://localhost:3000/api/v1/admin/replay-jobs
+curl http://localhost:3000/api/v1/admin/replay-jobs/{jobId}
+```
 
-The complete contracts, examples, UI mapping, and secret-dataset flow are in
-[docs/API.md](docs/API.md).
+When replay completes, it automatically writes `natija/fraud_signallari.csv` with `tx_id,risk_ball,sabab`. Only `BLOCK` decisions are included. `POST /api/v1/admin/exports/fraud-signals` can regenerate the same file without replaying. For a hidden dataset, replace the four CSVs and use a clean PostgreSQL database/volume so overlapping source IDs cannot mix runs.
 
-For local mobile wiring, `x-authenticated-client-id` represents identity already verified by a
-trusted gateway. This is **not a production authentication mechanism** and the API must not be publicly
-exposed with arbitrary callers allowed to set it.
+## Important APIs
+
+- `POST /api/v1/internal/transactions` — synchronous scoring
+- `GET /api/v1/operator/transactions` — filterable transactions
+- `GET /api/v1/operator/alerts` — analyst alert queue
+- `GET /api/v1/operator/metrics/summary` — dashboard and latency metrics
+- `GET /api/v1/customer/cards` — authenticated customer's cards
+- `GET /api/v1/customer/transactions` — authenticated customer's transactions
+- `GET /api/v1/customer/security-challenges` — step-up requests
+- `POST /api/v1/customer/security-challenges/:id/responses` — confirm/deny
+- `GET /api/v1/admin/evaluation` — offline sample-key evaluation
+- `POST /api/v1/admin/exports/fraud-signals` — submission CSV
+
+Customer routes temporarily use `x-authenticated-client-id` as trusted-gateway identity. A challenge is created automatically only when live scoring returns `STEP_UP`; replay does not create customer prompts. Labels are read only by the admin evaluation module and never by the runtime risk engine.
+
+## Documentation
+
+- [Algorithm and architecture decisions](DECISIONS.md)
+- [Database schema](DATABASE.md)
+
+## Verify
+
+```bash
+pnpm test
+pnpm build
+```
+
+The included replay contains 58,863 transactions. `GET /api/v1/admin/evaluation` returns precision, recall, F1, confusion counts, samples, and per-pattern recall.
