@@ -1,0 +1,14 @@
+{
+  "jami_tranzaksiya": 58863,
+  "firibgarlik_soni": 201,
+  "firibgarlik_ulushi_%": 0.341,
+  "naqshlar": {
+    "velocity": 95,
+    "geo_impossible": 7,
+    "card_testing": 47,
+    "amount_anomaly": 7,
+    "ring": 28,
+    "cold_start": 17
+  },
+  "baholash": "Precision / Recall / F1 — tx_id bo'yicha. Asosiy metrika: F1 va naqshlar bo'yicha recall (har bir naqshdan kamida bittasi topilishi kerak)."
+}
