@@ -9,6 +9,7 @@ import { CustomerSecurityModule } from './modules/customer-security/customer-sec
 import { IngestionModule } from './modules/ingestion/ingestion.module';
 import { ScoringModule } from './modules/scoring/scoring.module';
 import { TransactionsModule } from './modules/transactions/transactions.module';
+import { CardsModule } from './modules/cards/cards.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { TransactionsModule } from './modules/transactions/transactions.module';
       validate: validateEnvironment,
     }),
     DatabaseModule,
+    CardsModule,
     AlertsModule,
     CasesModule,
     CustomerSecurityModule,

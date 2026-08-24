@@ -18,6 +18,7 @@ export const operatorTransactionQuerySchema = z.strictObject({
 });
 
 export const customerTransactionQuerySchema = z.strictObject({
+  cardId: sourceIdSchema.optional(),
   from: z.iso.datetime({ offset: true }).optional(),
   to: z.iso.datetime({ offset: true }).optional(),
   cursor: z.string().min(1).optional(),

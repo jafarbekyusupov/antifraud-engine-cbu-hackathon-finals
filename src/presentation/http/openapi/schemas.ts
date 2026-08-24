@@ -388,13 +388,7 @@ export const customerChallengeResponseSchema: SchemaObject = {
     resolution: { type: 'string', enum: ['ALLOW', 'BLOCK', 'REVIEW'] },
     checks: {
       type: 'object',
-      required: [
-        'locationMatch',
-        'timezoneMatch',
-        'clockMatch',
-        'clockSkewSeconds',
-        'distanceKm',
-      ],
+      required: ['locationMatch', 'timezoneMatch', 'clockMatch', 'clockSkewSeconds', 'distanceKm'],
       properties: {
         locationMatch: { type: 'boolean' },
         timezoneMatch: { type: 'boolean' },
@@ -571,4 +565,49 @@ export const customerTransactionDetailSchema: SchemaObject = {
       },
     },
   ],
+};
+
+const customerCardItemSchema: SchemaObject = {
+  type: 'object',
+  required: ['cardId', 'type', 'currency', 'openedAt', 'dailyLimit'],
+  properties: {
+    cardId: { type: 'string', minLength: 1, maxLength: 100 },
+    type: { type: 'string', enum: ['UZCARD', 'HUMO', 'VISA', 'MASTERCARD'] },
+    currency: { type: 'string', minLength: 3, maxLength: 3 },
+    openedAt: { type: 'string', format: 'date' },
+    dailyLimit: { type: 'integer', minimum: 1 },
+  },
+};
+
+export const customerCardPageSchema: SchemaObject = {
+  type: 'object',
+  required: ['items', 'nextCursor'],
+  properties: {
+    items: { type: 'array', items: customerCardItemSchema },
+    nextCursor: { type: 'string', nullable: true },
+  },
+};
+
+export const operatorCardPageSchema: SchemaObject = {
+  type: 'object',
+  required: ['items', 'nextCursor'],
+  properties: {
+    items: {
+      type: 'array',
+      items: {
+        allOf: [
+          customerCardItemSchema,
+          {
+            type: 'object',
+            required: ['clientId', 'clientName'],
+            properties: {
+              clientId: { type: 'string', minLength: 1, maxLength: 100 },
+              clientName: { type: 'string' },
+            },
+          },
+        ],
+      },
+    },
+    nextCursor: { type: 'string', nullable: true },
+  },
 };
