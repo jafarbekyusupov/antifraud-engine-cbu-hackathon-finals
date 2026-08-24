@@ -1,6 +1,7 @@
 import { z } from 'zod';
+import { sourceIdSchema } from '../../../common/source-id.schema';
 
-export const authenticatedClientIdSchema = z.string().regex(/^C\d{5}$/);
+export const authenticatedClientIdSchema = sourceIdSchema;
 export const idempotencyKeySchema = z.string().trim().min(8).max(100);
 export const securityChallengeParamsSchema = z.strictObject({ id: z.uuid() });
 

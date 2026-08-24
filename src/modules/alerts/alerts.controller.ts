@@ -21,7 +21,7 @@ export class AlertsController {
   @Get()
   @ApiOperation({ summary: 'List fraud alerts using descending cursor pagination' })
   @ApiQuery({ name: 'status', required: false, enum: ['OPEN', 'CONFIRMED', 'FALSE_POSITIVE', 'CLOSED'] })
-  @ApiQuery({ name: 'clientId', required: false, pattern: '^C\\d{5}$' })
+  @ApiQuery({ name: 'clientId', required: false, type: String })
   @ApiQuery({ name: 'minimumRiskScore', required: false, type: Number, minimum: 0, maximum: 100 })
   @ApiQuery({ name: 'cursor', required: false, type: String })
   @ApiQuery({ name: 'limit', required: false, type: Number, minimum: 1, maximum: 100, example: 25 })

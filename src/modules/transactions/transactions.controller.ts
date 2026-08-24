@@ -21,9 +21,9 @@ export class TransactionsController {
 
   @Get()
   @ApiOperation({ summary: 'List transactions with decision and alert filters' })
-  @ApiQuery({ name: 'clientId', required: false, pattern: '^C\\d{5}$' })
-  @ApiQuery({ name: 'cardId', required: false, pattern: '^K\\d{6}$' })
-  @ApiQuery({ name: 'merchantId', required: false, pattern: '^M\\d{5}$' })
+  @ApiQuery({ name: 'clientId', required: false, type: String })
+  @ApiQuery({ name: 'cardId', required: false, type: String })
+  @ApiQuery({ name: 'merchantId', required: false, type: String })
   @ApiQuery({ name: 'channel', required: false, enum: ['ATM', 'ECOM', 'P2P', 'POS'] })
   @ApiQuery({ name: 'response', required: false, enum: ['OK', 'DECLINED'] })
   @ApiQuery({ name: 'action', required: false, enum: ['APPROVE', 'STEP_UP', 'BLOCK'] })
