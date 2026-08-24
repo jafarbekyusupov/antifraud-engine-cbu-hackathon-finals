@@ -1,0 +1,681 @@
+tx_id,risk_ball,sabab
+T00000536,70,Amount is 14.7 IQRs above this customer's normal range
+T00000694,85,690 km of travel would require 1825 km/h
+T00000720,85,400 km of travel would require 1252 km/h
+T00000742,70,Amount is 9.2 IQRs above this customer's normal range
+T00000834,85,540 km of travel would require 1107 km/h
+T00000950,70,Amount is 9.6 IQRs above this customer's normal range
+T00001171,85,598 km of travel would require 1543 km/h
+T00001259,85,657 km of travel would require 951 km/h
+T00001722,85,690 km of travel would require 1041 km/h
+T00001826,85,657 km of travel would require 2796 km/h
+T00001831,85,657 km of travel would require 3068 km/h
+T00002372,85,1073 km of travel would require 1683 km/h
+T00002754,70,Amount is 8.2 IQRs above this customer's normal range
+T00003194,85,690 km of travel would require 2069 km/h
+T00003286,85,598 km of travel would require 1440 km/h
+T00003488,70,Amount is 8.9 IQRs above this customer's normal range
+T00003493,70,Amount is 10.7 IQRs above this customer's normal range
+T00003494,70,Amount is 9.5 IQRs above this customer's normal range
+T00004047,85,630 km of travel would require 1672 km/h
+T00004189,85,442 km of travel would require 1083 km/h
+T00004304,85,554 km of travel would require 4640 km/h
+T00004343,85,1073 km of travel would require 971 km/h
+T00004580,85,690 km of travel would require 14608 km/h
+T00004650,70,Amount is 9.9 IQRs above this customer's normal range
+T00004652,85,217 km of travel would require 1074 km/h
+T00004747,70,Amount is 8.6 IQRs above this customer's normal range
+T00004850,85,540 km of travel would require 1371 km/h
+T00005100,85,629 km of travel would require 9512 km/h
+T00005227,85,207 km of travel would require 3124 km/h
+T00005361,70,Amount is 11.6 IQRs above this customer's normal range
+T00005630,70,Amount is 8.3 IQRs above this customer's normal range
+T00006094,85,690 km of travel would require 2659 km/h
+T00006215,85,1013 km of travel would require 2682 km/h
+T00006216,85,1013 km of travel would require 13019 km/h
+T00006226,85,1073 km of travel would require 1648 km/h
+T00006302,100,540 km of travel would require 4367 km/h; High-risk behavior was detected before a reliable personal baseline was established
+T00006507,85,540 km of travel would require 1441 km/h
+T00006864,85,540 km of travel would require 2854 km/h
+T00006996,70,Amount is 8.7 IQRs above this customer's normal range
+T00007310,70,Amount is 8.3 IQRs above this customer's normal range
+T00007312,70,Amount is 10.4 IQRs above this customer's normal range
+T00007499,85,629 km of travel would require 1030 km/h
+T00007592,85,657 km of travel would require 1113 km/h
+T00007671,85,156 km of travel would require 5655 km/h
+T00007721,70,Amount is 11.9 IQRs above this customer's normal range
+T00008088,85,1073 km of travel would require 1402 km/h
+T00008389,70,Amount is 12.3 IQRs above this customer's normal range
+T00008426,85,629 km of travel would require 2570 km/h
+T00008435,85,554 km of travel would require 1570 km/h
+T00008456,85,400 km of travel would require 4614 km/h
+T00008743,85,657 km of travel would require 6291 km/h
+T00008780,85,2162 km of travel would require 1075 km/h
+T00008781,85,2162 km of travel would require 152615 km/h
+T00008954,70,Amount is 8.8 IQRs above this customer's normal range
+T00009191,70,Amount is 11.4 IQRs above this customer's normal range
+T00009539,85,681 km of travel would require 2121 km/h
+T00009560,85,598 km of travel would require 6429 km/h
+T00010312,85,1073 km of travel would require 1182 km/h
+T00010339,70,Amount is 8.1 IQRs above this customer's normal range
+T00010549,85,474 km of travel would require 932 km/h
+T00010664,70,Amount is 8.2 IQRs above this customer's normal range
+T00010696,85,502 km of travel would require 1142 km/h
+T00010825,100,474 km of travel would require 35554 km/h; Amount is 9.0 IQRs above this customer's normal range
+T00010913,70,Amount is 19.1 IQRs above this customer's normal range
+T00011071,100,217 km of travel would require 2137 km/h; Amount is 3.7 IQRs above this customer's normal range
+T00011107,70,Amount is 14.3 IQRs above this customer's normal range
+T00011116,85,442 km of travel would require 3510 km/h
+T00011120,85,629 km of travel would require 2371 km/h
+T00011262,85,267 km of travel would require 1372 km/h
+T00011393,85,630 km of travel would require 23867 km/h
+T00011482,70,Amount is 8.0 IQRs above this customer's normal range
+T00011655,100,442 km of travel would require 908 km/h; Amount is 4.5 IQRs above this customer's normal range
+T00012364,85,690 km of travel would require 3151 km/h
+T00012683,70,Amount is 25.5 IQRs above this customer's normal range
+T00012773,70,Amount is 11.0 IQRs above this customer's normal range
+T00013020,85,3340 km of travel would require 12832 km/h
+T00013161,85,502 km of travel would require 2163 km/h
+T00013239,85,2648 km of travel would require 1583 km/h
+T00013240,85,2648 km of travel would require 5023 km/h
+T00013245,85,2648 km of travel would require 2802 km/h
+T00013348,70,Amount is 9.1 IQRs above this customer's normal range
+T00013388,85,1013 km of travel would require 969 km/h
+T00013612,85,2797 km of travel would require 14698 km/h
+T00013701,85,2280 km of travel would require 1785 km/h
+T00013704,85,540 km of travel would require 1746 km/h
+T00014059,85,681 km of travel would require 3459 km/h
+T00014181,70,Amount is 23.1 IQRs above this customer's normal range
+T00014272,85,540 km of travel would require 1609 km/h
+T00014294,70,Amount is 11.5 IQRs above this customer's normal range
+T00014331,70,Amount is 8.4 IQRs above this customer's normal range
+T00014457,85,540 km of travel would require 2231 km/h
+T00014518,70,Amount is 13.6 IQRs above this customer's normal range
+T00014750,85,540 km of travel would require 2085 km/h
+T00014886,85,474 km of travel would require 39688 km/h
+T00015465,85,657 km of travel would require 1188 km/h
+T00015590,85,598 km of travel would require 5917 km/h
+T00015770,70,Amount is 8.3 IQRs above this customer's normal range
+T00015903,85,681 km of travel would require 956 km/h
+T00016393,70,Amount is 8.4 IQRs above this customer's normal range
+T00016597,70,Amount is 8.2 IQRs above this customer's normal range
+T00016791,85,1039 km of travel would require 5791 km/h
+T00016914,85,442 km of travel would require 5540 km/h
+T00016962,85,400 km of travel would require 1198 km/h
+T00017023,85,442 km of travel would require 1554 km/h
+T00017035,70,Amount is 8.0 IQRs above this customer's normal range
+T00017128,70,Amount is 10.1 IQRs above this customer's normal range
+T00017364,85,442 km of travel would require 1014 km/h
+T00017493,85,426 km of travel would require 1231 km/h
+T00017568,85,156 km of travel would require 4665 km/h
+T00018057,85,207 km of travel would require 1375 km/h
+T00018500,70,Amount is 17.0 IQRs above this customer's normal range
+T00018560,85,629 km of travel would require 1244 km/h
+T00018722,85,3546 km of travel would require 6117 km/h
+T00019170,85,502 km of travel would require 2348 km/h
+T00019285,78,Amount is 9.4 IQRs above this customer's normal range
+T00019351,85,426 km of travel would require 1434 km/h
+T00019481,85,2801 km of travel would require 1920 km/h
+T00019484,85,2801 km of travel would require 23896 km/h
+T00019713,70,Amount is 8.8 IQRs above this customer's normal range
+T00020244,85,1039 km of travel would require 1190 km/h
+T00020289,85,1013 km of travel would require 3895 km/h
+T00020290,85,2534 km of travel would require 6446 km/h
+T00020647,70,Amount is 8.0 IQRs above this customer's normal range
+T00020889,85,690 km of travel would require 1002 km/h
+T00021014,85,400 km of travel would require 1273 km/h
+T00021262,85,1073 km of travel would require 2488 km/h
+T00021337,70,Amount is 9.0 IQRs above this customer's normal range
+T00021340,85,657 km of travel would require 13915 km/h
+T00021514,85,690 km of travel would require 1636 km/h
+T00021564,70,Amount is 12.7 IQRs above this customer's normal range
+T00022119,85,156 km of travel would require 13996 km/h
+T00022247,85,133 km of travel would require 3178 km/h
+T00022304,85,217 km of travel would require 1171 km/h
+T00022339,70,Amount is 11.0 IQRs above this customer's normal range
+T00022708,70,Amount is 9.7 IQRs above this customer's normal range
+T00022933,70,Amount is 8.1 IQRs above this customer's normal range
+T00022994,85,681 km of travel would require 3235 km/h
+T00023048,85,1073 km of travel would require 26104 km/h
+T00023050,85,1073 km of travel would require 3167 km/h
+T00023203,85,657 km of travel would require 9538 km/h
+T00023219,85,657 km of travel would require 1487 km/h
+T00023928,85,133 km of travel would require 14542 km/h
+T00024335,85,629 km of travel would require 984 km/h
+T00024526,85,419 km of travel would require 4064 km/h
+T00025751,85,3125 km of travel would require 15391 km/h
+T00025753,85,3125 km of travel would require 1652 km/h
+T00025867,85,657 km of travel would require 4722 km/h
+T00026636,70,Amount is 9.9 IQRs above this customer's normal range
+T00027905,85,630 km of travel would require 1333 km/h
+T00028186,70,Amount is 9.7 IQRs above this customer's normal range
+T00028243,85,502 km of travel would require 4752 km/h
+T00028327,85,629 km of travel would require 1427 km/h
+T00028330,85,1013 km of travel would require 7394 km/h
+T00028382,78,Amount is 8.4 IQRs above this customer's normal range
+T00028440,70,Amount is 10.0 IQRs above this customer's normal range
+T00028450,70,Amount is 9.5 IQRs above this customer's normal range
+T00028453,78,Amount is 18.9 IQRs above this customer's normal range
+T00028480,85,681 km of travel would require 175158 km/h
+T00028517,85,681 km of travel would require 21511 km/h
+T00028583,70,Amount is 8.0 IQRs above this customer's normal range
+T00028636,85,657 km of travel would require 2088 km/h
+T00028831,85,681 km of travel would require 3832 km/h
+T00028854,85,690 km of travel would require 2648 km/h
+T00029069,85,806 km of travel would require 31899 km/h
+T00029286,85,267 km of travel would require 1425 km/h
+T00030205,70,Amount is 9.6 IQRs above this customer's normal range
+T00030320,70,Amount is 13.4 IQRs above this customer's normal range
+T00030344,85,1039 km of travel would require 1049 km/h
+T00030482,85,681 km of travel would require 2035 km/h
+T00030625,85,237 km of travel would require 213463 km/h
+T00030705,85,681 km of travel would require 1572 km/h
+T00030808,85,1013 km of travel would require 1435 km/h
+T00030898,85,1073 km of travel would require 1113 km/h
+T00030949,85,502 km of travel would require 7886 km/h
+T00030992,85,474 km of travel would require 1112 km/h
+T00031084,70,Amount is 20.2 IQRs above this customer's normal range
+T00031114,70,Amount is 12.5 IQRs above this customer's normal range
+T00031149,85,237 km of travel would require 1813 km/h
+T00031174,85,806 km of travel would require 2120 km/h
+T00031198,85,442 km of travel would require 3279 km/h
+T00031398,70,Amount is 8.0 IQRs above this customer's normal range
+T00031516,85,1073 km of travel would require 1860 km/h
+T00031576,70,Amount is 11.0 IQRs above this customer's normal range
+T00031653,85,629 km of travel would require 3693 km/h
+T00033112,70,Amount is 9.7 IQRs above this customer's normal range
+T00033327,85,426 km of travel would require 1127 km/h
+T00033677,85,1073 km of travel would require 1006 km/h
+T00033786,85,681 km of travel would require 1546 km/h
+T00033938,70,Amount is 9.4 IQRs above this customer's normal range
+T00034161,85,1013 km of travel would require 1258 km/h
+T00034790,85,554 km of travel would require 3866 km/h
+T00035017,85,419 km of travel would require 1582 km/h
+T00035048,70,Amount is 8.5 IQRs above this customer's normal range
+T00035325,85,2534 km of travel would require 17145 km/h
+T00035338,85,2534 km of travel would require 3496 km/h
+T00035340,85,2534 km of travel would require 1106 km/h
+T00035341,85,2534 km of travel would require 5950 km/h
+T00035344,85,1073 km of travel would require 1126 km/h
+T00035538,70,Amount is 9.8 IQRs above this customer's normal range
+T00036089,70,Amount is 9.0 IQRs above this customer's normal range
+T00036164,85,3012 km of travel would require 2863 km/h
+T00036256,85,156 km of travel would require 1070 km/h
+T00036413,85,419 km of travel would require 2439 km/h
+T00036650,70,Amount is 8.7 IQRs above this customer's normal range
+T00036797,85,657 km of travel would require 1109 km/h
+T00036832,85,502 km of travel would require 1094 km/h
+T00037049,70,Amount is 13.4 IQRs above this customer's normal range
+T00037072,70,Amount is 11.2 IQRs above this customer's normal range
+T00037211,85,657 km of travel would require 1984 km/h
+T00037339,85,554 km of travel would require 4183 km/h
+T00037378,70,Amount is 8.2 IQRs above this customer's normal range
+T00037469,70,Amount is 12.1 IQRs above this customer's normal range
+T00037585,76,133 km of travel would require 843 km/h; Amount is 3.4 IQRs above this customer's normal range
+T00037711,85,630 km of travel would require 1953 km/h
+T00037860,85,442 km of travel would require 1335 km/h
+T00038046,70,Amount is 8.6 IQRs above this customer's normal range
+T00038243,70,Amount is 11.8 IQRs above this customer's normal range
+T00039050,85,554 km of travel would require 1524 km/h
+T00039253,85,681 km of travel would require 4636 km/h
+T00039271,85,681 km of travel would require 1333 km/h
+T00039338,85,629 km of travel would require 932 km/h
+T00039372,94,Amount is 9.9 IQRs above this customer's normal range; 502 km of travel would require 584 km/h
+T00039381,85,681 km of travel would require 1489 km/h
+T00039455,70,Amount is 8.8 IQRs above this customer's normal range
+T00039962,70,Amount is 13.7 IQRs above this customer's normal range
+T00040059,85,156 km of travel would require 2113 km/h
+T00040138,85,400 km of travel would require 2322 km/h
+T00040360,85,630 km of travel would require 3964 km/h
+T00040563,85,657 km of travel would require 4332 km/h
+T00040595,85,681 km of travel would require 1540 km/h
+T00040899,70,Amount is 8.7 IQRs above this customer's normal range
+T00040900,85,1013 km of travel would require 5986 km/h
+T00041574,70,Amount is 24.5 IQRs above this customer's normal range
+T00041612,70,Amount is 9.9 IQRs above this customer's normal range
+T00041777,70,Amount is 11.3 IQRs above this customer's normal range
+T00041884,85,474 km of travel would require 1829 km/h
+T00042073,70,Amount is 15.5 IQRs above this customer's normal range
+T00042158,85,1013 km of travel would require 941 km/h
+T00042300,85,2797 km of travel would require 1417 km/h
+T00042431,85,2648 km of travel would require 1083 km/h
+T00043063,100,1073 km of travel would require 9309 km/h; Amount is 5.8 IQRs above this customer's normal range
+T00043428,70,Amount is 11.9 IQRs above this customer's normal range
+T00043969,85,598 km of travel would require 1057 km/h
+T00044071,85,419 km of travel would require 5711 km/h
+T00044702,70,Amount is 9.7 IQRs above this customer's normal range
+T00044922,85,133 km of travel would require 1002 km/h
+T00045194,85,1013 km of travel would require 1285 km/h
+T00045208,85,554 km of travel would require 1095 km/h
+T00045440,85,598 km of travel would require 12237 km/h
+T00045510,85,3340 km of travel would require 3739 km/h
+T00045880,70,Amount is 11.0 IQRs above this customer's normal range
+T00046198,85,442 km of travel would require 17284 km/h
+T00046386,85,629 km of travel would require 1957 km/h
+T00047096,77,598 km of travel would require 874 km/h; High-risk behavior was detected before a reliable personal baseline was established
+T00047185,85,502 km of travel would require 2632 km/h
+T00047370,70,Amount is 15.5 IQRs above this customer's normal range
+T00047464,70,Amount is 13.6 IQRs above this customer's normal range
+T00047521,77,156 km of travel would require 831 km/h; High-risk behavior was detected before a reliable personal baseline was established
+T00047690,85,598 km of travel would require 1089 km/h
+T00047785,85,657 km of travel would require 924 km/h
+T00047872,85,426 km of travel would require 2100 km/h
+T00047970,85,598 km of travel would require 1967 km/h
+T00048048,85,502 km of travel would require 938 km/h
+T00048491,85,1073 km of travel would require 3143 km/h
+T00048507,85,598 km of travel would require 1126 km/h
+T00048930,100,690 km of travel would require 248336 km/h; Amount is 4.8 IQRs above this customer's normal range
+T00049324,70,Amount is 9.8 IQRs above this customer's normal range
+T00049492,85,2162 km of travel would require 1122 km/h
+T00050126,85,217 km of travel would require 2229 km/h
+T00050350,85,419 km of travel would require 1023 km/h
+T00050652,70,Amount is 8.6 IQRs above this customer's normal range
+T00050706,85,681 km of travel would require 4192 km/h
+T00050920,85,681 km of travel would require 1581 km/h
+T00050982,85,267 km of travel would require 2389 km/h
+T00051363,70,Amount is 8.0 IQRs above this customer's normal range
+T00051754,85,806 km of travel would require 3291 km/h
+T00051855,85,1013 km of travel would require 1202 km/h
+T00051998,85,3198 km of travel would require 1391 km/h
+T00052392,85,237 km of travel would require 915 km/h
+T00052433,85,474 km of travel would require 1213 km/h
+T00052546,85,442 km of travel would require 2668 km/h
+T00052619,85,629 km of travel would require 1469 km/h
+T00052884,85,2280 km of travel would require 4714 km/h
+T00053304,85,474 km of travel would require 993 km/h
+T00053387,70,Amount is 24.2 IQRs above this customer's normal range
+T00053682,85,426 km of travel would require 1845 km/h
+T00054078,70,Amount is 12.8 IQRs above this customer's normal range
+T00054115,85,1039 km of travel would require 124702 km/h
+T00054428,85,267 km of travel would require 930 km/h
+T00054446,70,Amount is 11.7 IQRs above this customer's normal range
+T00054586,85,598 km of travel would require 994 km/h
+T00054795,85,690 km of travel would require 2285 km/h
+T00055011,70,Amount is 9.4 IQRs above this customer's normal range
+T00055152,70,Amount is 39.8 IQRs above this customer's normal range
+T00055608,85,400 km of travel would require 1558 km/h
+T00055622,70,Amount is 8.6 IQRs above this customer's normal range
+T00055917,70,Amount is 10.6 IQRs above this customer's normal range
+T00056056,85,629 km of travel would require 1112 km/h
+T00056173,70,Amount is 8.0 IQRs above this customer's normal range
+T00056380,85,1039 km of travel would require 2494 km/h
+T00056392,85,806 km of travel would require 922 km/h
+T00056412,85,657 km of travel would require 1389 km/h
+T00056494,70,Amount is 9.6 IQRs above this customer's normal range
+T00056565,85,2790 km of travel would require 2008 km/h
+T00056853,85,426 km of travel would require 45158 km/h
+T00056874,78,Amount is 8.3 IQRs above this customer's normal range
+T00056964,70,Amount is 15.2 IQRs above this customer's normal range
+T00056965,78,Amount is 66.6 IQRs above this customer's normal range
+T00056966,70,Amount is 46.5 IQRs above this customer's normal range
+T00056967,94,Amount is 45.8 IQRs above this customer's normal range; 2206 km of travel would require 539 km/h
+T00056969,70,Amount is 13.4 IQRs above this customer's normal range
+T00056970,70,Amount is 15.5 IQRs above this customer's normal range
+T00056972,70,Amount is 15.7 IQRs above this customer's normal range
+T00056973,78,Amount is 48.1 IQRs above this customer's normal range
+T00056975,78,Amount is 29.7 IQRs above this customer's normal range
+T00056977,78,Amount is 22.2 IQRs above this customer's normal range
+T00056981,100,1408 km of travel would require 2080 km/h; Amount is 5.9 IQRs above this customer's normal range
+T00056986,70,Amount is 9.1 IQRs above this customer's normal range
+T00056994,70,Amount is 17.0 IQRs above this customer's normal range
+T00056995,70,Amount is 33.1 IQRs above this customer's normal range
+T00056996,78,Amount is 59.4 IQRs above this customer's normal range
+T00056998,78,Amount is 55.6 IQRs above this customer's normal range
+T00056999,70,Amount is 40.2 IQRs above this customer's normal range
+T00057000,78,Amount is 50.1 IQRs above this customer's normal range
+T00057001,78,Amount is 43.5 IQRs above this customer's normal range
+T00057004,78,Amount is 56.1 IQRs above this customer's normal range
+T00057005,78,Amount is 50.6 IQRs above this customer's normal range
+T00057006,70,Amount is 17.7 IQRs above this customer's normal range
+T00057008,78,Amount is 38.3 IQRs above this customer's normal range
+T00057009,78,Amount is 32.6 IQRs above this customer's normal range
+T00057012,100,2648 km of travel would require 1582 km/h; Amount is 27.1 IQRs above this customer's normal range
+T00057013,78,Amount is 23.4 IQRs above this customer's normal range
+T00057021,70,Amount is 10.9 IQRs above this customer's normal range
+T00057023,78,Amount is 44.1 IQRs above this customer's normal range
+T00057024,100,Amount is 48.6 IQRs above this customer's normal range; 1960 km of travel would require 668 km/h
+T00057025,70,Amount is 12.3 IQRs above this customer's normal range
+T00057027,78,Amount is 48.6 IQRs above this customer's normal range
+T00057028,78,Amount is 44.6 IQRs above this customer's normal range
+T00057032,70,Amount is 10.1 IQRs above this customer's normal range
+T00057033,70,Amount is 34.1 IQRs above this customer's normal range
+T00057035,70,Amount is 14.2 IQRs above this customer's normal range
+T00057036,70,Amount is 31.1 IQRs above this customer's normal range
+T00057037,70,Amount is 28.5 IQRs above this customer's normal range
+T00057038,70,Amount is 13.6 IQRs above this customer's normal range
+T00057039,70,Amount is 10.4 IQRs above this customer's normal range
+T00057042,100,2534 km of travel would require 984 km/h; Amount is 13.1 IQRs above this customer's normal range
+T00057043,85,2534 km of travel would require 935 km/h
+T00057044,70,Amount is 22.7 IQRs above this customer's normal range
+T00057046,70,Amount is 33.5 IQRs above this customer's normal range
+T00057047,70,Amount is 39.7 IQRs above this customer's normal range
+T00057049,70,Amount is 9.5 IQRs above this customer's normal range
+T00057050,70,Amount is 29.9 IQRs above this customer's normal range
+T00057052,70,Amount is 23.3 IQRs above this customer's normal range
+T00057053,70,Amount is 14.7 IQRs above this customer's normal range
+T00057054,78,Amount is 38.1 IQRs above this customer's normal range
+T00057056,70,Amount is 10.5 IQRs above this customer's normal range
+T00057058,70,Amount is 28.7 IQRs above this customer's normal range
+T00057059,78,Amount is 31.8 IQRs above this customer's normal range
+T00057060,94,Amount is 14.5 IQRs above this customer's normal range; 665 km of travel would require 659 km/h
+T00057061,70,Amount is 10.3 IQRs above this customer's normal range
+T00057064,70,Amount is 22.2 IQRs above this customer's normal range
+T00057067,70,Amount is 11.0 IQRs above this customer's normal range
+T00057073,85,2985 km of travel would require 3954 km/h
+T00057080,70,Amount is 15.8 IQRs above this customer's normal range
+T00057081,70,Amount is 20.7 IQRs above this customer's normal range
+T00057083,70,Amount is 29.0 IQRs above this customer's normal range
+T00057084,70,Amount is 8.7 IQRs above this customer's normal range
+T00057085,70,Amount is 27.1 IQRs above this customer's normal range
+T00057089,100,2797 km of travel would require 2726 km/h; Amount is 25.3 IQRs above this customer's normal range
+T00057090,70,Amount is 10.8 IQRs above this customer's normal range
+T00057091,70,Amount is 33.4 IQRs above this customer's normal range
+T00057092,78,Amount is 32.6 IQRs above this customer's normal range
+T00057093,100,2797 km of travel would require 2459 km/h; Amount is 5.0 IQRs above this customer's normal range
+T00057096,70,Amount is 24.2 IQRs above this customer's normal range
+T00057098,70,Amount is 19.5 IQRs above this customer's normal range
+T00057099,78,Amount is 30.5 IQRs above this customer's normal range
+T00057100,70,Amount is 26.0 IQRs above this customer's normal range
+T00057102,78,Amount is 29.6 IQRs above this customer's normal range
+T00057103,78,Amount is 37.6 IQRs above this customer's normal range
+T00057104,100,1811 km of travel would require 9005 km/h; Amount is 19.3 IQRs above this customer's normal range
+T00057105,70,Amount is 13.7 IQRs above this customer's normal range
+T00057109,70,Amount is 22.1 IQRs above this customer's normal range
+T00057111,85,3012 km of travel would require 8853 km/h
+T00057112,70,Amount is 19.2 IQRs above this customer's normal range
+T00057115,70,3012 km of travel would require 900 km/h; Amount is 3.7 IQRs above this customer's normal range
+T00057116,70,Amount is 13.3 IQRs above this customer's normal range
+T00057117,70,Amount is 12.1 IQRs above this customer's normal range
+T00057119,70,Amount is 8.7 IQRs above this customer's normal range
+T00057120,100,3012 km of travel would require 908 km/h; Amount is 15.7 IQRs above this customer's normal range
+T00057123,100,2797 km of travel would require 1016 km/h; Amount is 17.0 IQRs above this customer's normal range
+T00057126,70,Amount is 10.4 IQRs above this customer's normal range
+T00057127,70,Amount is 18.1 IQRs above this customer's normal range
+T00057130,78,Amount is 61.1 IQRs above this customer's normal range
+T00057131,70,Amount is 29.0 IQRs above this customer's normal range
+T00057132,78,Amount is 37.9 IQRs above this customer's normal range
+T00057134,70,Amount is 13.7 IQRs above this customer's normal range
+T00057139,70,Amount is 9.9 IQRs above this customer's normal range
+T00057141,70,Amount is 20.9 IQRs above this customer's normal range
+T00057142,70,Amount is 9.0 IQRs above this customer's normal range
+T00057143,78,Amount is 24.1 IQRs above this customer's normal range
+T00057144,70,Amount is 13.0 IQRs above this customer's normal range
+T00057145,70,Amount is 18.9 IQRs above this customer's normal range
+T00057147,70,Amount is 8.2 IQRs above this customer's normal range
+T00057148,70,Amount is 14.6 IQRs above this customer's normal range
+T00057149,70,Amount is 33.7 IQRs above this customer's normal range
+T00057151,70,Amount is 26.3 IQRs above this customer's normal range
+T00057154,70,Amount is 11.6 IQRs above this customer's normal range
+T00057156,70,Amount is 11.0 IQRs above this customer's normal range
+T00057157,70,Amount is 8.1 IQRs above this customer's normal range
+T00057162,70,Amount is 8.5 IQRs above this customer's normal range
+T00057164,70,Amount is 29.3 IQRs above this customer's normal range
+T00057165,70,Amount is 31.9 IQRs above this customer's normal range
+T00057171,80,Amount is 6.8 IQRs above this customer's normal range; High-risk behavior was detected before a reliable personal baseline was established
+T00057173,82,2534 km of travel would require 742 km/h; Amount is 7.3 IQRs above this customer's normal range
+T00057177,70,Amount is 13.8 IQRs above this customer's normal range
+T00057179,70,Amount is 20.7 IQRs above this customer's normal range
+T00057180,100,3546 km of travel would require 1366 km/h; Amount is 7.5 IQRs above this customer's normal range
+T00057181,70,Amount is 20.7 IQRs above this customer's normal range
+T00057184,70,Amount is 20.9 IQRs above this customer's normal range
+T00057185,78,Amount is 19.1 IQRs above this customer's normal range
+T00057188,70,Amount is 21.9 IQRs above this customer's normal range
+T00057189,70,Amount is 17.9 IQRs above this customer's normal range
+T00057195,70,Amount is 11.6 IQRs above this customer's normal range
+T00057207,70,Amount is 9.7 IQRs above this customer's normal range
+T00057208,94,Amount is 11.2 IQRs above this customer's normal range; 2957 km of travel would require 845 km/h
+T00057210,70,Amount is 16.5 IQRs above this customer's normal range
+T00057214,70,Amount is 11.8 IQRs above this customer's normal range
+T00057220,70,Amount is 9.5 IQRs above this customer's normal range
+T00057221,85,2957 km of travel would require 5253 km/h
+T00057222,70,Amount is 8.9 IQRs above this customer's normal range
+T00057226,70,Amount is 24.8 IQRs above this customer's normal range
+T00057229,100,464 km of travel would require 2053 km/h; Amount is 9.7 IQRs above this customer's normal range
+T00057230,70,Amount is 9.2 IQRs above this customer's normal range
+T00057231,70,Amount is 21.2 IQRs above this customer's normal range
+T00057233,70,Amount is 9.2 IQRs above this customer's normal range
+T00057239,78,Amount is 65.5 IQRs above this customer's normal range
+T00057240,100,1942 km of travel would require 2184 km/h; Amount is 60.4 IQRs above this customer's normal range
+T00057241,71,Amount is 53.7 IQRs above this customer's normal range
+T00057242,78,Amount is 87.0 IQRs above this customer's normal range
+T00057243,70,Amount is 34.6 IQRs above this customer's normal range
+T00057244,70,Amount is 20.6 IQRs above this customer's normal range
+T00057245,78,Amount is 66.7 IQRs above this customer's normal range
+T00057246,78,Amount is 44.3 IQRs above this customer's normal range
+T00057247,71,Amount is 64.5 IQRs above this customer's normal range
+T00057248,100,1942 km of travel would require 15430 km/h; Amount is 39.9 IQRs above this customer's normal range
+T00057249,78,Amount is 55.6 IQRs above this customer's normal range
+T00057250,78,Amount is 67.5 IQRs above this customer's normal range
+T00057251,78,Amount is 25.3 IQRs above this customer's normal range
+T00057252,70,Amount is 16.3 IQRs above this customer's normal range
+T00057253,78,Amount is 50.9 IQRs above this customer's normal range
+T00057254,70,Amount is 9.5 IQRs above this customer's normal range
+T00057255,100,2280 km of travel would require 101320 km/h; Amount is 15.4 IQRs above this customer's normal range
+T00057256,78,Amount is 33.8 IQRs above this customer's normal range
+T00057257,71,Amount is 38.5 IQRs above this customer's normal range
+T00057258,78,Amount is 31.7 IQRs above this customer's normal range
+T00057259,70,Amount is 9.3 IQRs above this customer's normal range
+T00057260,100,2280 km of travel would require 1102 km/h; Amount is 12.9 IQRs above this customer's normal range
+T00057270,78,Amount is 44.4 IQRs above this customer's normal range
+T00057272,78,Amount is 9.8 IQRs above this customer's normal range
+T00057273,70,Amount is 11.5 IQRs above this customer's normal range
+T00057279,70,Amount is 13.3 IQRs above this customer's normal range
+T00057285,85,2162 km of travel would require 1043 km/h
+T00057287,70,Amount is 10.9 IQRs above this customer's normal range
+T00057288,70,Amount is 13.4 IQRs above this customer's normal range
+T00057297,70,Amount is 8.2 IQRs above this customer's normal range
+T00057303,70,Amount is 23.7 IQRs above this customer's normal range
+T00057304,70,Amount is 14.3 IQRs above this customer's normal range
+T00057305,70,Amount is 13.9 IQRs above this customer's normal range
+T00057306,100,1830 km of travel would require 10459 km/h; Amount is 5.6 IQRs above this customer's normal range
+T00057307,70,Amount is 18.7 IQRs above this customer's normal range
+T00057308,70,Amount is 21.2 IQRs above this customer's normal range
+T00057309,70,Amount is 22.8 IQRs above this customer's normal range
+T00057310,70,Amount is 16.9 IQRs above this customer's normal range
+T00057312,70,Amount is 23.8 IQRs above this customer's normal range
+T00057313,78,Amount is 94.1 IQRs above this customer's normal range
+T00057314,100,3125 km of travel would require 910 km/h; Amount is 81.7 IQRs above this customer's normal range
+T00057315,100,Amount is 80.2 IQRs above this customer's normal range; 3125 km of travel would require 877 km/h
+T00057317,100,3125 km of travel would require 3482 km/h; Amount is 48.0 IQRs above this customer's normal range
+T00057319,100,2790 km of travel would require 1004 km/h; Amount is 12.6 IQRs above this customer's normal range
+T00057321,100,2790 km of travel would require 8772 km/h; Amount is 20.2 IQRs above this customer's normal range
+T00057322,70,Amount is 13.4 IQRs above this customer's normal range
+T00057323,70,Amount is 17.6 IQRs above this customer's normal range
+T00057324,70,Amount is 18.8 IQRs above this customer's normal range
+T00057325,100,2790 km of travel would require 2501 km/h; Amount is 24.6 IQRs above this customer's normal range
+T00057329,100,Amount is 9.8 IQRs above this customer's normal range; 2797 km of travel would require 501 km/h
+T00057330,78,Amount is 9.6 IQRs above this customer's normal range
+T00057333,70,Amount is 16.5 IQRs above this customer's normal range
+T00057335,70,Amount is 13.6 IQRs above this customer's normal range
+T00057336,100,3340 km of travel would require 4515 km/h; Amount is 9.0 IQRs above this customer's normal range
+T00057337,70,Amount is 8.8 IQRs above this customer's normal range
+T00057342,70,Amount is 24.1 IQRs above this customer's normal range
+T00057343,78,Amount is 56.9 IQRs above this customer's normal range
+T00057344,78,Amount is 58.6 IQRs above this customer's normal range
+T00057345,78,Amount is 79.1 IQRs above this customer's normal range
+T00057346,78,Amount is 58.7 IQRs above this customer's normal range
+T00057348,100,3546 km of travel would require 3418 km/h; Amount is 6.5 IQRs above this customer's normal range
+T00057349,82,3546 km of travel would require 707 km/h; Amount is 13.1 IQRs above this customer's normal range
+T00057350,70,Amount is 26.5 IQRs above this customer's normal range
+T00057351,70,Amount is 29.2 IQRs above this customer's normal range
+T00057352,70,Amount is 12.7 IQRs above this customer's normal range
+T00057354,70,Amount is 11.0 IQRs above this customer's normal range
+T00057355,70,Amount is 24.3 IQRs above this customer's normal range
+T00057358,85,3012 km of travel would require 1743 km/h
+T00057359,78,Amount is 11.4 IQRs above this customer's normal range
+T00057360,78,Amount is 19.7 IQRs above this customer's normal range
+T00057361,78,Amount is 16.3 IQRs above this customer's normal range
+T00057364,78,Amount is 14.7 IQRs above this customer's normal range
+T00057366,100,3012 km of travel would require 1608 km/h; Amount is 12.7 IQRs above this customer's normal range
+T00057367,78,Amount is 11.5 IQRs above this customer's normal range
+T00057370,78,Amount is 10.0 IQRs above this customer's normal range
+T00057371,78,Amount is 8.9 IQRs above this customer's normal range
+T00057378,70,Amount is 16.7 IQRs above this customer's normal range
+T00057382,100,2162 km of travel would require 1409 km/h; Amount is 20.5 IQRs above this customer's normal range
+T00057383,70,Amount is 11.1 IQRs above this customer's normal range
+T00057386,100,2162 km of travel would require 1052 km/h; Amount is 6.3 IQRs above this customer's normal range
+T00057387,70,Amount is 11.3 IQRs above this customer's normal range
+T00057388,70,Amount is 12.4 IQRs above this customer's normal range
+T00057389,82,2162 km of travel would require 542 km/h; Amount is 7.6 IQRs above this customer's normal range
+T00057390,70,Amount is 8.2 IQRs above this customer's normal range
+T00057392,70,Amount is 13.0 IQRs above this customer's normal range
+T00057395,70,Amount is 15.6 IQRs above this customer's normal range
+T00057396,70,Amount is 23.4 IQRs above this customer's normal range
+T00057397,100,2801 km of travel would require 3216 km/h; Amount is 8.1 IQRs above this customer's normal range
+T00057398,82,2801 km of travel would require 611 km/h; Amount is 5.9 IQRs above this customer's normal range
+T00057399,70,Amount is 8.0 IQRs above this customer's normal range
+T00057400,70,Amount is 12.9 IQRs above this customer's normal range
+T00057401,70,Amount is 8.0 IQRs above this customer's normal range
+T00057404,100,2801 km of travel would require 3173 km/h; Amount is 15.1 IQRs above this customer's normal range
+T00057406,70,Amount is 9.0 IQRs above this customer's normal range
+T00057407,70,Amount is 14.2 IQRs above this customer's normal range
+T00057409,70,Amount is 29.3 IQRs above this customer's normal range
+T00057410,100,2206 km of travel would require 2880 km/h; Amount is 27.6 IQRs above this customer's normal range
+T00057411,100,2206 km of travel would require 1374 km/h; Amount is 31.5 IQRs above this customer's normal range
+T00057412,70,Amount is 28.1 IQRs above this customer's normal range
+T00057413,70,Amount is 16.8 IQRs above this customer's normal range
+T00057616,70,Amount is 9.6 IQRs above this customer's normal range
+T00057802,70,Amount is 13.0 IQRs above this customer's normal range
+T00057804,70,Amount is 9.0 IQRs above this customer's normal range
+T00057805,70,Amount is 8.4 IQRs above this customer's normal range
+T00057808,70,Amount is 9.0 IQRs above this customer's normal range
+T00057812,70,Amount is 8.2 IQRs above this customer's normal range
+T00057816,72,Amount is 6.4 IQRs above this customer's normal range; 6 transactions were attempted on this card within 10 minutes
+T00057968,70,Amount is 58.8 IQRs above this customer's normal range
+T00057969,70,Amount is 10.1 IQRs above this customer's normal range
+T00057971,70,Amount is 10.4 IQRs above this customer's normal range
+T00057988,70,Amount is 9.2 IQRs above this customer's normal range
+T00057989,70,Amount is 16.9 IQRs above this customer's normal range
+T00058064,70,Amount is 9.1 IQRs above this customer's normal range
+T00058074,70,Amount is 8.8 IQRs above this customer's normal range
+T00058137,76,540 km of travel would require 711 km/h; Amount is 4.5 IQRs above this customer's normal range
+T00058231,70,Amount is 9.4 IQRs above this customer's normal range
+T00058239,70,Amount is 10.6 IQRs above this customer's normal range
+T00058513,70,Amount is 12.5 IQRs above this customer's normal range
+T00058515,70,Amount is 11.0 IQRs above this customer's normal range
+T00058516,70,Amount is 12.2 IQRs above this customer's normal range
+T00058589,71,Amount is 260.6 IQRs above this customer's normal range
+T00058590,71,Amount is 97.7 IQRs above this customer's normal range
+T00058591,100,Amount is 312.8 IQRs above this customer's normal range; High-risk behavior was detected before a reliable personal baseline was established
+T00058592,85,Amount is 237.0 IQRs above this customer's normal range
+T00058593,71,Amount is 379.7 IQRs above this customer's normal range
+T00058595,71,Amount is 248.5 IQRs above this customer's normal range
+T00058596,85,Amount is 107.5 IQRs above this customer's normal range
+T00058597,71,Amount is 132.2 IQRs above this customer's normal range
+T00058600,85,Amount is 923.6 IQRs above this customer's normal range
+T00058601,78,Amount is 171.0 IQRs above this customer's normal range
+T00058602,71,Amount is 116.0 IQRs above this customer's normal range
+T00058604,71,Amount is 231.4 IQRs above this customer's normal range
+T00058605,71,Amount is 286.1 IQRs above this customer's normal range
+T00058607,71,Amount is 870.2 IQRs above this customer's normal range
+T00058608,100,Amount is 192.9 IQRs above this customer's normal range; High-risk behavior was detected before a reliable personal baseline was established
+T00058609,71,Amount is 296.0 IQRs above this customer's normal range
+T00058613,71,Amount is 250.9 IQRs above this customer's normal range
+T00058614,79,Amount is 324.7 IQRs above this customer's normal range
+T00058615,71,Amount is 163.2 IQRs above this customer's normal range
+T00058616,71,Amount is 470.9 IQRs above this customer's normal range
+T00058617,85,Amount is 66.8 IQRs above this customer's normal range
+T00058618,71,Amount is 443.9 IQRs above this customer's normal range
+T00058619,78,Amount is 622.2 IQRs above this customer's normal range
+T00058620,85,Amount is 644.6 IQRs above this customer's normal range
+T00058621,100,Amount is 153.9 IQRs above this customer's normal range; 1960 km of travel would require 791 km/h
+T00058622,85,Amount is 231.9 IQRs above this customer's normal range
+T00058623,71,Amount is 262.2 IQRs above this customer's normal range
+T00058624,71,Amount is 85.0 IQRs above this customer's normal range
+T00058625,85,Amount is 124.2 IQRs above this customer's normal range
+T00058626,71,Amount is 166.8 IQRs above this customer's normal range
+T00058627,71,Amount is 108.9 IQRs above this customer's normal range
+T00058628,71,Amount is 286.0 IQRs above this customer's normal range
+T00058630,78,Amount is 160.1 IQRs above this customer's normal range
+T00058631,85,Amount is 458.9 IQRs above this customer's normal range
+T00058632,80,Amount is 339.8 IQRs above this customer's normal range; High-risk behavior was detected before a reliable personal baseline was established
+T00058633,71,Amount is 1000.0 IQRs above this customer's normal range
+T00058634,85,Amount is 182.8 IQRs above this customer's normal range
+T00058635,100,Amount is 906.0 IQRs above this customer's normal range; 598 km of travel would require 590 km/h
+T00058636,79,Amount is 188.0 IQRs above this customer's normal range
+T00058638,71,Amount is 268.9 IQRs above this customer's normal range
+T00058639,71,Amount is 86.0 IQRs above this customer's normal range
+T00058640,71,Amount is 257.6 IQRs above this customer's normal range
+T00058641,71,Amount is 276.9 IQRs above this customer's normal range
+T00058642,85,Amount is 149.0 IQRs above this customer's normal range
+T00058643,71,Amount is 1400.2 IQRs above this customer's normal range
+T00058644,100,Amount is 273.7 IQRs above this customer's normal range; High-risk behavior was detected before a reliable personal baseline was established
+T00058645,88,Amount is 450.5 IQRs above this customer's normal range; High-risk behavior was detected before a reliable personal baseline was established
+T00058646,85,Amount is 313.2 IQRs above this customer's normal range
+T00058647,78,Amount is 210.0 IQRs above this customer's normal range
+T00058648,85,Amount is 223.7 IQRs above this customer's normal range
+T00058649,100,3572 km of travel would require 5932 km/h; Amount is 437.1 IQRs above this customer's normal range
+T00058650,95,Amount is 186.2 IQRs above this customer's normal range; High-risk behavior was detected before a reliable personal baseline was established
+T00058651,85,Amount is 856.9 IQRs above this customer's normal range
+T00058652,71,Amount is 123.5 IQRs above this customer's normal range
+T00058668,70,Amount is 15.7 IQRs above this customer's normal range
+T00058669,70,Amount is 18.0 IQRs above this customer's normal range
+T00058670,70,Amount is 21.6 IQRs above this customer's normal range
+T00058671,70,Amount is 8.0 IQRs above this customer's normal range; 6 transactions were attempted on this card within 10 minutes
+T00058676,82,Amount is 9.0 IQRs above this customer's normal range; 5 transactions were attempted on this card within 10 minutes
+T00058688,70,Amount is 8.7 IQRs above this customer's normal range
+T00058689,70,Amount is 14.6 IQRs above this customer's normal range
+T00058690,70,Amount is 10.7 IQRs above this customer's normal range
+T00058691,70,Amount is 9.4 IQRs above this customer's normal range
+T00058692,73,Amount is 5.7 IQRs above this customer's normal range; 7 transactions were attempted on this card within 10 minutes
+T00058695,85,Amount is 8.5 IQRs above this customer's normal range; 6 transactions were attempted on this card within 10 minutes
+T00058710,70,8 transactions were attempted on this card within 10 minutes; Amount is 3.2 IQRs above this customer's normal range
+T00058752,100,3359 km of travel would require 6501 km/h; Amount is 25.9 IQRs above this customer's normal range
+T00058754,100,2985 km of travel would require 14923 km/h; Amount is 9.1 IQRs above this customer's normal range
+T00058756,100,2280 km of travel would require 3420 km/h; Amount is 14.5 IQRs above this customer's normal range
+T00058758,100,3607 km of travel would require 9409 km/h; Amount is 28.1 IQRs above this customer's normal range
+T00058760,100,2162 km of travel would require 4054 km/h; Amount is 36.7 IQRs above this customer's normal range
+T00058762,100,3375 km of travel would require 5955 km/h; Amount is 34.0 IQRs above this customer's normal range
+T00058764,100,3124 km of travel would require 13387 km/h; Amount is 52.4 IQRs above this customer's normal range
+T00058770,85,Amount is 107.4 IQRs above this customer's normal range
+T00058781,78,Amount is 248.4 IQRs above this customer's normal range
+T00058790,85,Amount is 162.2 IQRs above this customer's normal range
+T00058795,70,Amount is 33.8 IQRs above this customer's normal range
+T00058803,78,Amount is 153.3 IQRs above this customer's normal range
+T00058811,78,Amount is 223.4 IQRs above this customer's normal range
+T00058812,85,Amount is 152.9 IQRs above this customer's normal range
+T00058813,78,Amount is 193.8 IQRs above this customer's normal range
+T00058814,88,Amount is 225.7 IQRs above this customer's normal range; High-risk behavior was detected before a reliable personal baseline was established
+T00058815,71,Amount is 310.9 IQRs above this customer's normal range
+T00058816,79,Amount is 182.1 IQRs above this customer's normal range
+T00058817,85,Amount is 402.9 IQRs above this customer's normal range
+T00058818,85,Amount is 203.5 IQRs above this customer's normal range
+T00058821,71,Amount is 29.4 IQRs above this customer's normal range
+T00058822,71,Amount is 28.9 IQRs above this customer's normal range
+T00058827,78,Amount is 62.9 IQRs above this customer's normal range
+T00058828,78,Amount is 79.8 IQRs above this customer's normal range
+T00058829,78,Amount is 68.9 IQRs above this customer's normal range
+T00058830,78,Amount is 82.0 IQRs above this customer's normal range
+T00058831,78,Amount is 78.7 IQRs above this customer's normal range
+T00058832,70,Amount is 33.2 IQRs above this customer's normal range
+T00058833,70,Amount is 33.8 IQRs above this customer's normal range
+T00058834,78,Amount is 47.7 IQRs above this customer's normal range
+T00058835,70,Amount is 21.9 IQRs above this customer's normal range
+T00058836,85,Amount is 1170.6 IQRs above this customer's normal range
+T00058837,85,Amount is 711.8 IQRs above this customer's normal range
+T00058838,85,Amount is 391.2 IQRs above this customer's normal range
+T00058839,85,Amount is 573.9 IQRs above this customer's normal range
+T00058840,100,Amount is 795.7 IQRs above this customer's normal range; High-risk behavior was detected before a reliable personal baseline was established
+T00058841,85,Amount is 563.0 IQRs above this customer's normal range
+T00058842,78,Amount is 321.4 IQRs above this customer's normal range
+T00058843,85,Amount is 1307.5 IQRs above this customer's normal range
+T00058844,100,Amount is 339.5 IQRs above this customer's normal range; High-risk behavior was detected before a reliable personal baseline was established
+T00058845,85,Amount is 304.7 IQRs above this customer's normal range
+T00058846,85,Amount is 242.2 IQRs above this customer's normal range
+T00058847,78,Amount is 173.6 IQRs above this customer's normal range
+T00058848,85,Amount is 639.9 IQRs above this customer's normal range
+T00058849,85,Amount is 240.8 IQRs above this customer's normal range
+T00058850,85,Amount is 455.9 IQRs above this customer's normal range
+T00058851,85,Amount is 1798.7 IQRs above this customer's normal range
+T00058852,85,Amount is 872.8 IQRs above this customer's normal range
+T00058853,100,Amount is 1012.9 IQRs above this customer's normal range; High-risk behavior was detected before a reliable personal baseline was established
+T00058854,85,Amount is 1003.1 IQRs above this customer's normal range
+T00058855,85,Amount is 585.8 IQRs above this customer's normal range
+T00058856,85,Amount is 702.7 IQRs above this customer's normal range
+T00058857,100,Amount is 1073.7 IQRs above this customer's normal range; High-risk behavior was detected before a reliable personal baseline was established
+T00058858,85,Amount is 245.8 IQRs above this customer's normal range
+T00058859,85,Amount is 366.9 IQRs above this customer's normal range
+T00058860,85,Amount is 103.2 IQRs above this customer's normal range
+T00058861,85,Amount is 281.1 IQRs above this customer's normal range
+T00058862,85,Amount is 310.0 IQRs above this customer's normal range
+T00058863,85,Amount is 354.6 IQRs above this customer's normal range
