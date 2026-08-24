@@ -44,6 +44,8 @@ async function bootstrap(): Promise<void> {
     .addTag('Customer cards', 'Authenticated customer card list')
     .addTag('Transactions', 'Operator transaction list and detail')
     .addTag('Customer transactions', 'Authenticated customer transaction list and detail')
+    .addTag('Metrics', 'Operator dashboard summary and latency percentiles')
+    .addTag('Evaluation and export', 'Submission CSV and answer-key evaluation')
     .addTag('Customer security', 'Mobile suspicious-transaction verification')
     .build();
   const openApiDocument = (): OpenAPIObject =>

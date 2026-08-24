@@ -10,6 +10,8 @@ import { IngestionModule } from './modules/ingestion/ingestion.module';
 import { ScoringModule } from './modules/scoring/scoring.module';
 import { TransactionsModule } from './modules/transactions/transactions.module';
 import { CardsModule } from './modules/cards/cards.module';
+import { MetricsModule } from './modules/metrics/metrics.module';
+import { EvaluationModule } from './modules/evaluation/evaluation.module';
 
 @Module({
   imports: [
@@ -19,6 +21,8 @@ import { CardsModule } from './modules/cards/cards.module';
     }),
     DatabaseModule,
     CardsModule,
+    MetricsModule,
+    EvaluationModule,
     AlertsModule,
     CasesModule,
     CustomerSecurityModule,
