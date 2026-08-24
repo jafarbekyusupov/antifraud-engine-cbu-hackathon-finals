@@ -8,6 +8,7 @@ import { CasesModule } from './modules/cases/cases.module';
 import { CustomerSecurityModule } from './modules/customer-security/customer-security.module';
 import { IngestionModule } from './modules/ingestion/ingestion.module';
 import { ScoringModule } from './modules/scoring/scoring.module';
+import { TransactionsModule } from './modules/transactions/transactions.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { ScoringModule } from './modules/scoring/scoring.module';
     HealthModule,
     IngestionModule,
     ScoringModule,
+    TransactionsModule,
   ],
 })
 export class AppModule {}

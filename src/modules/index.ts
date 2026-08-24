@@ -5,3 +5,4 @@ export * from './health';
 export * from './ingestion/ingestion.module';
 export * from './risk/risk.module';
 export * from './scoring/scoring.module';
+export * from './transactions/transactions.module';
