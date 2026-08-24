@@ -1,0 +1,46 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: antifraud
+      POSTGRES_USER: antifraud
+      POSTGRES_PASSWORD: antifraud
+    ports:
+      - "5432:5432"
+    volumes:
+      - antifraud-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U antifraud -d antifraud"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  app:
+    build: .
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: antifraud
+      DB_USERNAME: antifraud
+      DB_PASSWORD: antifraud
+      DATA_DIR: /app/data
+      RESULT_DIR: /app/natija
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3001,http://localhost:5173}
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data:ro
+      - ./natija:/app/natija
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  antifraud-postgres:

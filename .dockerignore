@@ -1,0 +1,14 @@
+.git
+.env
+.env.*
+!.env.example
+!.env.vps.example
+.idea
+.pnpm-store
+.vscode
+coverage
+data
+dist
+natija
+node_modules
+*.log
