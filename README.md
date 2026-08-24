@@ -1,4 +1,4 @@
-# CBU Anti-Fraud Engine
+# CBU Anti-Fraud Engine - cbu-fraud-engine.vercel.app
 
 Real-time, explainable card-transaction fraud scoring for the CBU Coding Hackathon 2026. The service accepts live transactions, produces a 0–100 risk score, replays CSV datasets chronologically, exposes analyst/customer APIs, and generates the required submission file.
 
@@ -15,6 +15,8 @@ Place `clients.csv`, `cards.csv`, `merchants.csv`, and `transactions.csv` in `da
 ```bash
 docker compose up --build
 ```
+
+The image starts as root only long enough to make the bind-mounted `natija/` directory writable, then drops to the unprivileged `node` user before starting NestJS.
 
 Or locally:
 
