@@ -6,6 +6,7 @@ import {
   ReplayJobRepository,
 } from '../../application/ports/replay-job.repository';
 import { ReplayTransactionsUseCase } from '../../application/replay-transactions/replay-transactions.use-case';
+import { FraudSignalsExportService } from '../evaluation/fraud-signals-export.service';
 
 @Injectable()
 export class ReplayJobService {
@@ -15,6 +16,7 @@ export class ReplayJobService {
     private readonly importDataset: ImportDatasetUseCase,
     private readonly replayTransactions: ReplayTransactionsUseCase,
     @Inject(REPLAY_JOB_REPOSITORY) private readonly jobs: ReplayJobRepository,
+    private readonly fraudSignalsExport: FraudSignalsExportService,
   ) {}
 
   async start(): Promise<ReplayJobRecord> {
@@ -46,6 +48,7 @@ export class ReplayJobService {
       const result = await this.replayTransactions.execute((progress) =>
         this.jobs.updateProgress(jobId, progress.processed, progress.alertsCreated),
       );
+      await this.fraudSignalsExport.export();
       await this.jobs.complete(jobId, result.processed, result.alertsCreated);
     } catch (error) {
       const message = error instanceof Error ? error.message : 'Unknown replay failure';
