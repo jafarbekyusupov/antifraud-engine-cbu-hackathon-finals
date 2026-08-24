@@ -23,6 +23,8 @@ Database migrations run automatically on application startup.
 
 - Web fraud-analyst clients use `/api/v1/operator/*`.
 - Mobile customer clients use `/api/v1/customer/security-challenges/*`.
+- Web fraud-analyst transaction history uses `/api/v1/operator/transactions/*`.
+- Mobile customer transaction history uses `/api/v1/customer/transactions/*`.
 - Payment infrastructure uses `/api/v1/internal/transactions`.
 - Demo/judge controls use `/api/v1/admin/replay-jobs`.
 

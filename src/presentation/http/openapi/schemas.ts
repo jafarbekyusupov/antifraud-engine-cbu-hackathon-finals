@@ -406,3 +406,169 @@ export const customerChallengeResponseSchema: SchemaObject = {
     respondedAt: dateTime,
   },
 };
+
+const operatorTransactionItemSchema: SchemaObject = {
+  type: 'object',
+  required: [
+    'transactionId',
+    'cardId',
+    'clientId',
+    'clientName',
+    'merchantId',
+    'merchantName',
+    'amount',
+    'currency',
+    'occurredAt',
+    'city',
+    'channel',
+    'response',
+    'mcc',
+    'riskScore',
+    'action',
+    'signalCodes',
+    'alertId',
+    'alertStatus',
+    'customerVerificationStatus',
+  ],
+  properties: {
+    transactionId: { type: 'string', pattern: '^T\\d{8}$' },
+    cardId: { type: 'string', pattern: '^K\\d{6}$' },
+    clientId: { type: 'string', pattern: '^C\\d{5}$' },
+    clientName: { type: 'string' },
+    merchantId: { type: 'string', pattern: '^M\\d{5}$' },
+    merchantName: { type: 'string' },
+    amount: { type: 'integer', minimum: 1 },
+    currency: { type: 'string' },
+    occurredAt: dateTime,
+    city: { type: 'string' },
+    channel: { type: 'string', enum: ['ATM', 'ECOM', 'P2P', 'POS'] },
+    response: { type: 'string', enum: ['OK', 'DECLINED'] },
+    mcc: { type: 'string' },
+    riskScore: { type: 'integer', minimum: 0, maximum: 100, nullable: true },
+    action: { type: 'string', enum: ['APPROVE', 'STEP_UP', 'BLOCK'], nullable: true },
+    signalCodes: { type: 'array', items: { type: 'string' } },
+    alertId: { ...uuid, nullable: true },
+    alertStatus: {
+      type: 'string',
+      enum: ['OPEN', 'CONFIRMED', 'FALSE_POSITIVE', 'CLOSED'],
+      nullable: true,
+    },
+    customerVerificationStatus: {
+      type: 'string',
+      enum: ['PENDING', 'VERIFIED', 'DENIED', 'REVIEW_REQUIRED', 'EXPIRED'],
+      nullable: true,
+    },
+  },
+};
+
+export const operatorTransactionPageSchema: SchemaObject = {
+  type: 'object',
+  required: ['items', 'nextCursor'],
+  properties: {
+    items: { type: 'array', items: operatorTransactionItemSchema },
+    nextCursor: { type: 'string', nullable: true },
+  },
+};
+
+export const operatorTransactionDetailSchema: SchemaObject = {
+  allOf: [
+    operatorTransactionItemSchema,
+    {
+      type: 'object',
+      required: [
+        'latitude',
+        'longitude',
+        'merchantCategory',
+        'merchantCity',
+        'merchantRiskLevel',
+        'ruleVersion',
+        'signals',
+        'caseId',
+        'caseStatus',
+        'customerVerification',
+      ],
+      properties: {
+        latitude: { type: 'number' },
+        longitude: { type: 'number' },
+        merchantCategory: { type: 'string' },
+        merchantCity: { type: 'string' },
+        merchantRiskLevel: { type: 'string', enum: ['LOW', 'MEDIUM', 'HIGH'] },
+        ruleVersion: { type: 'string', nullable: true },
+        signals: { type: 'array', items: signalSchema },
+        caseId: { ...uuid, nullable: true },
+        caseStatus: {
+          type: 'string',
+          enum: ['OPEN', 'INVESTIGATING', 'CONFIRMED', 'FALSE_POSITIVE', 'CLOSED'],
+          nullable: true,
+        },
+        customerVerification: { type: 'object', nullable: true, additionalProperties: true },
+      },
+    },
+  ],
+};
+
+const customerTransactionItemSchema: SchemaObject = {
+  type: 'object',
+  required: [
+    'transactionId',
+    'merchantName',
+    'amount',
+    'currency',
+    'occurredAt',
+    'city',
+    'channel',
+    'response',
+    'verificationStatus',
+  ],
+  properties: {
+    transactionId: { type: 'string', pattern: '^T\\d{8}$' },
+    merchantName: { type: 'string' },
+    amount: { type: 'integer', minimum: 1 },
+    currency: { type: 'string' },
+    occurredAt: dateTime,
+    city: { type: 'string' },
+    channel: { type: 'string', enum: ['ATM', 'ECOM', 'P2P', 'POS'] },
+    response: { type: 'string', enum: ['OK', 'DECLINED'] },
+    verificationStatus: {
+      type: 'string',
+      enum: ['PENDING', 'VERIFIED', 'DENIED', 'REVIEW_REQUIRED', 'EXPIRED'],
+      nullable: true,
+    },
+  },
+};
+
+export const customerTransactionPageSchema: SchemaObject = {
+  type: 'object',
+  required: ['items', 'nextCursor'],
+  properties: {
+    items: { type: 'array', items: customerTransactionItemSchema },
+    nextCursor: { type: 'string', nullable: true },
+  },
+};
+
+export const customerTransactionDetailSchema: SchemaObject = {
+  allOf: [
+    customerTransactionItemSchema,
+    {
+      type: 'object',
+      required: [
+        'cardId',
+        'merchantCategory',
+        'merchantCity',
+        'mcc',
+        'latitude',
+        'longitude',
+        'verification',
+      ],
+      properties: {
+        cardId: { type: 'string' },
+        merchantCategory: { type: 'string' },
+        merchantCity: { type: 'string' },
+        mcc: { type: 'string' },
+        latitude: { type: 'number' },
+        longitude: { type: 'number' },
+        verification: { type: 'object', nullable: true, additionalProperties: true },
+      },
+    },
+  ],
+};
