@@ -13,6 +13,7 @@ export interface FraudSignalsExportResult {
   file: 'natija/fraud_signallari.csv';
   predictionCount: number;
   ruleVersion: string;
+  csv: string;
 }
 
 @Injectable()
@@ -32,18 +33,16 @@ export class FraudSignalsExportService {
         [record.transactionId, record.riskScore, record.reasons.join('; ')].map(csvCell).join(','),
       ),
     ];
+    const csv = `${rows.join('\n')}\n`;
 
     await mkdir(this.config.resultDirectory, { recursive: true });
-    await writeFile(
-      join(this.config.resultDirectory, 'fraud_signallari.csv'),
-      `${rows.join('\n')}\n`,
-      'utf8',
-    );
+    await writeFile(join(this.config.resultDirectory, 'fraud_signallari.csv'), csv, 'utf8');
 
     return {
       file: 'natija/fraud_signallari.csv',
       predictionCount: records.length,
       ruleVersion: this.riskEngine.ruleVersion,
+      csv,
     };
   }
 }
