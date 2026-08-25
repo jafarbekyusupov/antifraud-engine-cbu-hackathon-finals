@@ -1,15 +1,21 @@
 import { Inject, Injectable } from '@nestjs/common';
+import { and, eq, inArray } from 'drizzle-orm';
+import { securityChallengeExpiresAt } from '../../application/common/security-challenge-expiry';
 import {
   DecisionBatchRepository,
   ScoredTransaction,
 } from '../../application/ports/decision-batch.repository';
+import { AppConfig } from '../../config/app.config';
 import { AntiFraudDatabase } from '../../database/database.types';
 import { DATABASE } from '../../database/database.tokens';
-import { alerts, decisions } from '../../database/schemas';
+import { alerts, decisions, securityChallenges } from '../../database/schemas';
 
 @Injectable()
 export class DrizzleDecisionBatchRepository implements DecisionBatchRepository {
-  constructor(@Inject(DATABASE) private readonly database: AntiFraudDatabase) {}
+  constructor(
+    @Inject(DATABASE) private readonly database: AntiFraudDatabase,
+    private readonly config: AppConfig,
+  ) {}
 
   async save(
     records: readonly ScoredTransaction[],
@@ -52,6 +58,50 @@ export class DrizzleDecisionBatchRepository implements DecisionBatchRepository {
 
       if (newAlerts.length > 0) {
         await transaction.insert(alerts).values(newAlerts).onConflictDoNothing();
+      }
+
+      if (this.config.createReplayChallenges) {
+        const stepUpRecords = records.filter((record) => record.assessment.action === 'STEP_UP');
+        const ruleVersion = stepUpRecords[0]?.assessment.ruleVersion;
+        if (stepUpRecords.length > 0 && ruleVersion) {
+          const decisionRows = await transaction
+            .select({ id: decisions.id, transactionId: decisions.transactionId })
+            .from(decisions)
+            .where(
+              and(
+                eq(decisions.ruleVersion, ruleVersion),
+                inArray(
+                  decisions.transactionId,
+                  stepUpRecords.map((record) => record.transaction.id),
+                ),
+              ),
+            );
+          const decisionIdByTransaction = new Map(
+            decisionRows.map((decision) => [decision.transactionId, decision.id]),
+          );
+          const expiresAt = securityChallengeExpiresAt(
+            this.config.securityChallengeTtlSeconds,
+          );
+          const challengeRows = stepUpRecords.flatMap((record) => {
+            const decisionId = decisionIdByTransaction.get(record.transaction.id);
+            return decisionId
+              ? [
+                  {
+                    decisionId,
+                    transactionId: record.transaction.id,
+                    clientId: record.transaction.clientId,
+                    expiresAt,
+                  },
+                ]
+              : [];
+          });
+          if (challengeRows.length > 0) {
+            await transaction
+              .insert(securityChallenges)
+              .values(challengeRows)
+              .onConflictDoNothing({ target: securityChallenges.decisionId });
+          }
+        }
       }
 
       return { decisions: insertedDecisions.length, alerts: newAlerts.length };

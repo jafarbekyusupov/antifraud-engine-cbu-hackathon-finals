@@ -1,11 +1,13 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { and, eq } from 'drizzle-orm';
+import { securityChallengeExpiresAt } from '../../application/common/security-challenge-expiry';
 import {
   SaveScoreInput,
   ScoreTransactionResult,
   ScoringRepository,
 } from '../../application/ports/scoring.repository';
 import { ReplayTransaction } from '../../application/ports/transaction-replay.repository';
+import { AppConfig } from '../../config/app.config';
 import { AntiFraudDatabase } from '../../database/database.types';
 import { DATABASE } from '../../database/database.tokens';
 import {
@@ -20,7 +22,10 @@ import {
 
 @Injectable()
 export class DrizzleScoringRepository implements ScoringRepository {
-  constructor(@Inject(DATABASE) private readonly database: AntiFraudDatabase) {}
+  constructor(
+    @Inject(DATABASE) private readonly database: AntiFraudDatabase,
+    private readonly config: AppConfig,
+  ) {}
 
   async findDecision(
     transactionId: string,
@@ -162,7 +167,7 @@ export class DrizzleScoringRepository implements ScoringRepository {
             decisionId: decision.id,
             transactionId: input.transaction.id,
             clientId: input.transaction.clientId,
-            expiresAt: new Date(Date.now() + 5 * 60 * 1_000),
+            expiresAt: securityChallengeExpiresAt(this.config.securityChallengeTtlSeconds),
           })
           .returning({ id: securityChallenges.id });
         challengeId = challenge?.id ?? null;

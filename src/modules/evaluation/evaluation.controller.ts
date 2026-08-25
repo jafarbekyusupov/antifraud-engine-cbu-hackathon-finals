@@ -1,14 +1,9 @@
-import { Controller, Get, Post } from '@nestjs/common';
-import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
-import {
-  evaluationResponseSchema,
-  fraudSignalsExportResponseSchema,
-} from '../../presentation/http/openapi/schemas';
+import { Controller, Get, HttpCode, HttpStatus, Post, Res } from '@nestjs/common';
+import { ApiOperation, ApiProduces, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { FastifyReply } from 'fastify';
+import { evaluationResponseSchema } from '../../presentation/http/openapi/schemas';
 import { EvaluationResponse, EvaluationService } from './evaluation.service';
-import {
-  FraudSignalsExportResult,
-  FraudSignalsExportService,
-} from './fraud-signals-export.service';
+import { FraudSignalsExportService } from './fraud-signals-export.service';
 
 @Controller('v1/admin')
 @ApiTags('Evaluation and export')
@@ -19,14 +14,25 @@ export class EvaluationController {
   ) {}
 
   @Post('exports/fraud-signals')
-  @ApiOperation({ summary: 'Write the mandatory natija/fraud_signallari.csv submission file' })
-  @ApiResponse({
-    status: 201,
-    description: 'Fraud-signal CSV generated',
-    schema: fraudSignalsExportResponseSchema,
+  @HttpCode(HttpStatus.OK)
+  @ApiProduces('text/csv')
+  @ApiOperation({
+    summary: 'Generate and download the mandatory fraud-signals CSV',
+    description:
+      'Writes natija/fraud_signallari.csv and returns the exact same bytes as a downloadable CSV.',
   })
-  exportFraudSignals(): Promise<FraudSignalsExportResult> {
-    return this.exporter.export();
+  @ApiResponse({
+    status: 200,
+    description: 'Generated fraud-signals CSV',
+    content: { 'text/csv': { schema: { type: 'string', format: 'binary' } } },
+  })
+  async exportFraudSignals(@Res({ passthrough: true }) response: FastifyReply): Promise<string> {
+    const result = await this.exporter.export();
+    response.header('Content-Type', 'text/csv; charset=utf-8');
+    response.header('Content-Disposition', 'attachment; filename="fraud_signallari.csv"');
+    response.header('X-Prediction-Count', String(result.predictionCount));
+    response.header('X-Rule-Version', result.ruleVersion);
+    return result.csv;
   }
 
   @Get('evaluation')

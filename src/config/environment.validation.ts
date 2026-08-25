@@ -8,6 +8,21 @@ function integer(value: unknown, fallback: number, name: string): number {
   return parsed;
 }
 
+function nonNegativeInteger(value: unknown, fallback: number, name: string): number {
+  const parsed = Number(value ?? fallback);
+  if (!Number.isInteger(parsed) || parsed < 0) {
+    throw new Error(`${name} must be a non-negative integer`);
+  }
+  return parsed;
+}
+
+function boolean(value: unknown, fallback: boolean, name: string): boolean {
+  if (value === undefined || value === null || value === '') return fallback;
+  if (value === true || value === 'true' || value === '1') return true;
+  if (value === false || value === 'false' || value === '0') return false;
+  throw new Error(`${name} must be true or false`);
+}
+
 function requiredString(value: unknown, fallback: string, name: string): string {
   const parsed = typeof value === 'string' ? value.trim() : fallback;
   if (!parsed) {
@@ -28,6 +43,16 @@ export function validateEnvironment(environment: RawEnvironment): RawEnvironment
     DB_PASSWORD: requiredString(environment.DB_PASSWORD, 'antifraud', 'DB_PASSWORD'),
     DATA_DIR: requiredString(environment.DATA_DIR, './data', 'DATA_DIR'),
     RESULT_DIR: requiredString(environment.RESULT_DIR, './natija', 'RESULT_DIR'),
+    CREATE_REPLAY_CHALLENGES: boolean(
+      environment.CREATE_REPLAY_CHALLENGES,
+      false,
+      'CREATE_REPLAY_CHALLENGES',
+    ),
+    SECURITY_CHALLENGE_TTL_SECONDS: nonNegativeInteger(
+      environment.SECURITY_CHALLENGE_TTL_SECONDS,
+      300,
+      'SECURITY_CHALLENGE_TTL_SECONDS',
+    ),
     CORS_ORIGINS: requiredString(
       environment.CORS_ORIGINS,
       'http://localhost:3001,http://localhost:5173',
